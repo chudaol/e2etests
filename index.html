@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>CERTIFIER</title>
+		<title>End to End Testing</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -25,117 +25,219 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-image="img/berlin.jpg">
+				<section data-background-image="img/first.gif" data-background-size="80%">
+				</section>
+				<section>
 					<h1>
-						CERTIFIER
+						End to end testing
 					</h1>
 					<h2>
-						Wild Code School Project
+						For Carmeq
 					</h2>
+					<p>
+						By Olga Filipova <a href="mailto:chudaol@gmail.com">chudaol@gmail.com</a>
+					</p>
 				</section>
 				<section>
 					<h2>Outline</h2>
 					<ul>
-						<li>Who we are</li>
-						<li>What we do</li>
-						<li>Why certifier?</li>
-						<li>Requirements</li>
+						<li>Why e2e testing</li>
+						<li>Tools</li>
+						<li>Testing with Cypress</li>
+						<li>Demo - SMONLEAP</li>
+						<li>Let's test Carmeq</li>
 					</ul>
 				</section>
 				<section>
-					<h1>WHO WE ARE</h1>
+					<h1>why e2e testing</h1>
 				</section>
 				<section>
-					<h2>EdEra</h2>
-					<a href="https://www.ed-era.com/">https://www.ed-era.com/</a>
-					<p class="fragment">Non-profit</p>
-					<p class="fragment">Online education studio</p>
-					<p class="fragment">Based in Ukraine 🇺🇦</p>
+					<p class="fragment">Regression</p>
+					<p class="fragment">Happy path</p>
+					<p class="fragment">Automation</p>
+				</section>
+				<section data-background-image="img/automation.webp">
+					<p class="fragment">Well... or at least semi-automation</p>
 				</section>
 				<section>
-					<h2>SMONLEAP - smart online learning platform</h2>
-					<a href="https://www.smonleap.com/">https://www.smonleap.com/</a>
-					<p class="fragment">Startup based in Berlin</p>
-					<p class="fragment">Develops learning platform for corporate L&D</p>
-					<p class="fragment">Looking for investment!💰💰️</p>
+					<h1>Tools</h1>
+				</section>
+				<section data-background-image="img/travolta.webp">
+					<p class="fragment">Hundreds of tools</p>
+					<p class="fragment">Don't be lost</p>
+					<p class="fragment">Identify your needs and expertise first!</p>
 				</section>
 				<section>
-					<a href="http://a.co/d/aPREIrN">http://a.co/d/aPREIrN</a>
-					<img src="img/sdfaz.png" alt="Software Development from A to Z">
-				</section>
-				<section>
-					<h1>WHAT WE DO</h1>
-				</section>
-				<section>
-					<h2>Online education studio</h2>
-					<p class="fragment">Different types of educational projects</p>
+					<h2><a href="https://www.seleniumhq.org/">Selenium</a> and Selenium Grid</h2>
 					<ul>
-						<li class="fragment">MOOCs</li>
-						<li class="fragment">Videos</li>
-						<li class="fragment">Interactive books</li>
-						<li class="fragment">Educational blogs</li>
-						<li class="fragment">Blended learning and offline events</li>
+						<li class="fragment">😀 Java code</li>
+						<li class="fragment">😀 Control over devices</li>
+						<li class="fragment">😀 Integrates nicely with Jenkins and other CI/CD tools</li>
+						<li class="fragment">😀 For x-browser and x-device can also be integrated with <a href="https://www.browserstack.com">Browserstack</a></li>
+						<li class="fragment">😩 Hard to maintain and sync versions of browsers/systems and Selenium server</li>
+						<li class="fragment">😩 Requires both programming and devops skills</li>
 					</ul>
 				</section>
 				<section>
-					<h1>WHY CERTIFIER</h1>
-				</section>
-				<section>
-					<h2>Need for certification</h2>
-					<p class="fragment">Sometimes our online students receive certificates</p>
-					<p class="fragment">For classic MOOCs this feature is integrated in the platform</p>
-					<p class="fragment">For non-standard format (simple web page with couple of videos and text) it's trickier</p>
-				</section>
-				<section data-background-image="img/certifyem.png">
-					<p>Certify'em</p>
+					<h2><a href="https://www.katalon.com/">Katalon Studio</a></h2>
 					<ul>
-						<li class="fragment">Final exam should be in Google Forms</li>
-						<li class="fragment">Not really flexible when it comes to templates</li>
+						<li class="fragment">
+							😀 Can record browser interaction and trasform this recording into an automated test
+						</li>
+						<li class="fragment">
+							😀 Can be a part of a CI/CD pipeline
+						</li>
+						<li class="fragment">
+							😩 Painful installation and configuration
+						</li>
 					</ul>
 				</section>
 				<section>
-					<h1>CERTIFIER - REQUIREMENTS</h1>
-				</section>
-				<section>
-					<h2>General information ✅</h2>
-					<p class="fragment">A tool that allows students to generate their certificate of completion of a given online course 🏆</p>
-					<p class="fragment">An admin defines the template and a list of people who finished the course 📝</p>
-					<p class="fragment">Students open a given link and their certificate is generated 🔗</p>
-				</section>
-				<section>
-					<h2>As an admin</h2>
+					<h2><a href="https://nightwatchjs.org/">Nightwatch</a></h2>
 					<ul>
-						<li>I want to choose a template for a certificate</li>
-						<li>I want to fill in the course information</li>
-						<li>I want to upload the list of students eligible for certification</li>
+						<li class="fragment">
+							😀 Write tests in JavaScript
+						</li>
+						<li class="fragment">
+							😀 Very nice documentation and easy to use API
+						</li>
+						<li class="fragment">
+							😀 Can be integrated with Browserstack for x-browser/x-device testing
+						</li>
+						<li class="fragment">
+							😩 Uses selenium webdriver which brings all the pains of the version synchronization
+						</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Certificate Templates</h2>
+					<h2><a href="https://www.cypress.io/">Cypress</a></h2>
 					<ul>
-						<li>Should contain the course name</li>
-						<li>Should contain the logo of the institution (course issuer)</li>
-						<li>Should contain the length of the course in hours</li>
+						<li class="fragment">
+							😀 Write tests in JavaScript
+						</li>
+						<li class="fragment">
+							😀 Its API can be used for both unit and browser testing
+						</li>
+						<li class="fragment">
+							😀 It doesn't use Selenium!
+						</li>
+						<li class="fragment">
+							😀 It is really easy to get start with it
+						</li>
 					</ul>
 				</section>
+				<section data-background-image="img/cypress.png" data-background-size="80%">
+
+				</section>
 				<section>
-					<h2>As a student</h2>
-					<ul>
-						<li>I receive the email with the link</li>
-						<li>I open the link</li>
-						<li>Ta-da my certificate is generated</li>
-						<li>Now I can print it or download as a PDF</li>
-					</ul>
+					<h1>Testing with Cypress</h1>
 				</section>
-				<section data-background-image="img/certificate.png" data-background-size="80%"></section>
 				<section>
-					<h1>The requirements are not written in stone</h1>
+					<pre>
+						<code class="hljs javascript">
+	$ cd /your/project/path
+	$ npm install cypress --save-dev
+						</code>
+					</pre>
+					<pre>
+						<code class="hljs javascript">
+	// cypress.json
+	{
+	  "integrationFolder": "tests"
+	}
+						</code>
+					</pre>
 				</section>
-				<section data-background-image="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif">
-					<h2>If you want to go wild go wild!</h2>
+				<section>
+					<pre>
+						<code class="hljs javascript">
+	$ vim tests/test.spec.js
+
+	describe('Our first cypress test', () => {
+	  it('Should match!', () => {
+	    expect(true).to.be.true
+	  })
+	})
+						</code>
+					</pre>
 				</section>
-				<section data-background-image="https://media.giphy.com/media/XHVmD4RyXgSjd8aUMb/giphy.gif" data-background-size="80%"></section>
-				<section data-background-image="https://media.giphy.com/media/osjgQPWRx3cac/giphy.gif" data-background-size="70%">
+				<section>
+					<pre>
+						<code class="hljs javascript">
+	$ npx cypress open
+						</code>
+					</pre>
+					<img class="fragment" src="img/cypress-open.png" alt="cypress open">
+				</section>
+				<section>
+					<img src="img/cypress-run.png" alt="cypress running">
+				</section>
+				<section>
+					<h1>smonleap tests</h1>
+				</section>
+				<section data-background-video="img/smonleap-tests.mov">
+
+				</section>
+				<section>
+					<h1>Let's test Carmeq</h1>
+				</section>
+				<section>
+					<pre>
+						<code class="hljs javascript">
+describe('Carmeq - Test search functionality', () => {
+  it('Should Find some results related to cars', () => {
+    cy.visit('https://www.carmeq.com')
+    // search input is not visible until we click the search button
+    cy.get('#ctrl_keywords_12').should('not.be.visible')
+    // click search button
+    cy.get('.search>a').click()
+    // now the search input is visible
+    cy.get('#ctrl_keywords_12').should('be.visible')
+    // type the search keyeord cars
+    cy.get('#ctrl_keywords_12').type('cars')
+    // click on submit button
+    cy.get('#ctrl_submit_12').click()
+    // the result page with the header containing the word results should appear
+    cy.get('.header').should('contain', 'Results')
+  })
+})
+						</code>
+					</pre>
+				</section>
+				<section>
+					<pre>
+						<code class="hljs javascript">
+describe('Carmeq - Test toggle menu functionality', () => {
+  it('Should open menu', () => {
+    cy.visit('https://www.carmeq.com')
+    // the menu should not be visible until we click the toggler
+    cy.get('#toggleOffCanvas').should('not.be.visible')
+    // click the toggler
+    cy.get('.navbar-toggler.offcanvas-toggler').first().click()
+    // now the menu should be visible
+    cy.get('#toggleOffCanvas').should('be.visible')
+  })
+})
+						</code>
+					</pre>
+				</section>
+				<section data-background-video="img/test-carmeq.mov"></section>
+				<section>
+					<img src="img/magic.webp" alt="magic">
+				</section>
+				<section>
+					<h2>There is no silver bullet</h2>
+					<p>And there are more decisions to make</p>
+					<p class="fragment">Should it be a part of CI/CD?</p>
+					<p class="fragment">Should it be a dedicated team?</p>
+					<p class="fragment">Should we invest in x-browser x-device testing?</p>
+					<p class="fragment">???</p>
+				</section>
+				<section>
+					<blockquote>Just remember - it is always better to have small and simple but working than complex and huge that will take a lifespan to implement</blockquote>
+				</section>
+				<section data-background-image="img/questions.webp" data-background-size="70%"></section>
+				<section data-background-image="img/thanks.webp" data-background-size="70%">
 				</section>
 				<section>
 					<h2>Contacts</h2>
